@@ -4,7 +4,7 @@ datetime <- paste(data_main$Date, data_main$Time)
 data_main$Datetime <- as.POSIXct(datetime)
 
 png(filename="plot4.png",height=480, width=480)
-par(mfrow=c(2,2), mar=c(4,4,3,1), oma=c(0,0,2,0))
+par(mfrow=c(2,2), mar=c(4,4,3,2), oma=c(1,0,2,0))
 with(data_main, {
   plot(Global_active_power~Datetime, type="l", 
        ylab="Global Active Power", xlab="")
